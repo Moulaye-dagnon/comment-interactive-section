@@ -1,0 +1,65 @@
+.formContainer{
+	position: relative;
+	padding: 16px 16px 77px 16px;
+	border-radius: 8px;
+	background:  #FFF;
+	max-width: 730px;
+	margin: 0 auto;
+}
+.Form-profil{
+	position: absolute;
+	left: 16px;
+	bottom: 18px;
+	width: 32px;
+	height: 32px;
+}
+.Form-profil img{
+	width: 100%;
+}
+.textComment textarea{
+	width: 100%;
+	height: 96px;
+	border-radius: 8px;
+	resize: none;
+border: 1px solid  #E9EBF0;
+}
+.btn-send{
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	/* width: 104px;
+	height: 48px;
+	border-radius: 8px;
+	background:  #5357B6; */
+}
+@media only screen and (min-width : 550px) {
+	.formContainer{
+		padding: 24px  24px 24px 88px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.Form-profil{
+		left: 24px;
+		top: 24px;
+		bottom: auto;
+
+	}
+	.textComment{
+		flex-grow: 1;
+		margin-right: 16px;
+	}
+	.textComment textarea{
+		width: 100%;
+
+	}
+	.btn-send{
+		flex: none;
+		align-self: flex-start ;
+		position: static;
+	}
+	
+	
+
+}

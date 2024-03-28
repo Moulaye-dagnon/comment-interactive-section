@@ -1,0 +1,27 @@
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+ *, *::before,*::after{
+	box-sizing:border-box;
+ }
+body{
+	padding: 0;
+	margin: 0;
+	background: var(--Very-Light-Gray, #F5F6FA);	
+	font-family: Rubik;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+	
+}
+button{
+	border-radius: 8px;
+	background:  #5357B6;
+	width: 104px;
+	border: none;
+	color: #fff;
+	height: 48px;
+}
+button:hover{
+	opacity: .5;
+}
