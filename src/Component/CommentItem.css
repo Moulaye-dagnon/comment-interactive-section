@@ -20,13 +20,23 @@
 }
 .profil-pseudo{
 	font-weight: 700;
-}
-.profil-pseudo{
 	margin: 0 16px;
+}
+.profil-you{
+	margin: 0 16px 0 2px;
+	font-size: 0.81rem;
+	font-weight: bold;
+	border-radius: 2px;
+	background-color:  #5357B6;
+	color: #F5F6FA;
+	padding: 0 6px;
 }
 .comment-profil{
 	width: 32px;
 	height: 32px;
+}
+.comment-body span{
+	color: #5357B6;
 }
 .Comment-like{
 	position: absolute;
@@ -41,7 +51,7 @@
 	border-radius: 10px;
 
 }
-.Comment-Reply{
+.Comment-Reply, .Edit-Delete{
 	position: absolute;
 	right: 16px;
 	bottom: 16px;
@@ -50,10 +60,19 @@
 .Comment-Reply:hover{
 	opacity: .5;
 }
-.commentReply{
-	width: 90%;
+.Edit-Delete{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-@media only screen and (min-width : 500px) {
+.Edit-Delete .Comment-Delete  {
+	margin-right: 24px;	
+}
+.Edit-Delete .Comment-Delete img , .Edit-Delete .Comment-Edit img{
+	margin-right: 8px;
+}
+
+@media only screen and (min-width : 600px) {
 	.CommentItem{
 		
 		padding: 24px;
@@ -74,10 +93,12 @@
 		flex-direction: column;
 	}
 	
-	.Comment-Reply{
+	.Comment-Reply , .Edit-Delete{
 		right: 24px;
 		bottom: auto;
 		top: 28px;
 	}
+	
+	
 	
 }
