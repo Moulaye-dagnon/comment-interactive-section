@@ -9,7 +9,7 @@ export function FormComment ({ currentUser, setDataComments,dataComments}){
 		let newRecors = {
 			"id" : id,
 			"content": value,
-			"createdAt":currentTime ,
+			"createdAt":'now' ,
 			"score": 0,
 			"user": {
 				"image": { 

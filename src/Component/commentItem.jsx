@@ -97,7 +97,7 @@ export function Comments({commentData , setDataComments , dataComments,currentUs
 							<span className='profil-you'>you</span>
 						): ''}
 
-						<span className='comment-date'>{commentData.score} mois </span>
+						<span className='comment-date'>{commentData.createdAt}  </span>
 						</div>
 						<p className='comment-body'>{ commentData.replyingTo ? (
 							<>
