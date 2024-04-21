@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import { FormComponent } from "../Form/Form";
-export function FormComment({ currentUser, setDataComments }) {
+import { currentUserContext, setdataCommentsContext } from "../../utils/contex";
+export function FormComment({  }) {
+	const setDataComments = useContext(setdataCommentsContext)
+	const currentUser = useContext(currentUserContext)
   const hanldleSubmit = (e) => {
     e.preventDefault();
     setDataComments({

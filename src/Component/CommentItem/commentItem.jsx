@@ -7,7 +7,11 @@ import icon_edit from "../../assets/icon-edit.svg";
 
 import { useContext, useState } from "react";
 import { FormComponent } from "../Form/Form";
-export function Comments({ commentData, setDataComments, currentUser }) {
+import { currentUserContext, setdataCommentsContext } from "../../utils/contex";
+export function Comments({ commentData }) {
+
+	const setDataComments = useContext(setdataCommentsContext)
+	const currentUser = useContext(currentUserContext)
   const [Reply, setReply] = useState(false);
   const [Edit, setEdit] = useState(false);
 
