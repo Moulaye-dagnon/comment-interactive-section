@@ -1,28 +1,28 @@
-.container{
-	padding: 16px;
+.container {
+  padding: 16px;
 }
-.all{
-	max-width: 730px;
-	margin: 0 auto;
+.all {
+  max-width: 730px;
+  margin: 0 auto;
 }
-.all .CommentItem{
-	width: 100%;
+.all .CommentItem {
+  width: 100%;
 }
 
-.reply{
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-items: end;
-	margin: 0 auto;
+.reply {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: end;
+  margin: 0 auto;
 }
-.reply .CommentItem{
-	width: 92.82%;
-	margin: 20px 0 ;
+.reply .CommentItem {
+  width: 92.82%;
+  margin: 20px 0;
 }
-@media only screen and (min-width : 600px) {
-	.reply .CommentItem{
-		width: 87,94;
-	}
+@media only screen and (min-width: 600px) {
+  .reply .CommentItem {
+    width: 87, 94;
+  }
 }
