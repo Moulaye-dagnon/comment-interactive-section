@@ -1,0 +1,37 @@
+.a{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #00000046;
+
+}
+.Modal{
+	 position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+	border-radius: 8px;
+	background: var(--White, #FFF);
+	max-width:  343px;
+	flex-shrink: 0;
+	padding: 16px ;
+}
+.Modal p{
+	font-size: 0.9rem;
+}
+.Modal-title{
+	font-size: 20px;
+	margin: 0;
+}
+.btn-modal{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btn-cancel{
+	background-color: #67727E;
+}
+.btn-delete{
+	background-color: #ED6368;
+	
+}

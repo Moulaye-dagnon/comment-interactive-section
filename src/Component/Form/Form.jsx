@@ -5,10 +5,10 @@ export function FormComponent({submit,pseudo = true  , btnName}){
 		{pseudo && 	<div className="Form-profil">
 			<img src="../../public/images/avatars/image-juliusomo.png" alt="" />
 		  </div>}
-		<div className='textComment'>
+		<div className={pseudo ?'textComment': 'EditTexteria'}>
 		  <textarea />
 		</div>
-		<button className="btn-send"  type="submit">
+		<button   type="submit">
 		  {btnName}
 		</button>
 	  </form>

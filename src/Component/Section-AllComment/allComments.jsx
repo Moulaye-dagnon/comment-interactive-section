@@ -1,21 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext, useReducer, useState } from "react";
 import "./allComments.css";
-import { Comments } from "./commentItem";
-import { FormComment } from "./FormContent";
-import { dataCommentsContext } from "../utils/contex.jsx";
+import { Comments } from "../CommentItem/commentItem.jsx";
+import { FormComment } from "../main-Form/FormContent.jsx";
+import { dataCommentsContext } from "../../utils/contex.jsx";
+import { CommentReducteur } from "../../Function/CommentReducter.jsx";
 export function AllComments({ data }) {
   const [Data, setData] = useState(data);
   const { currentUser, comments } = Data;
-  const [dataComments, setDataComments] = useState(comments);
-  const [editComment, setEditComment] = useState("");
-  const [replyComment, setReplyComment] = useState("");
-  const [recordComment, setRecordComment] = useState("");
-
-
-  
+  const [dataComments, setDataComments] = useReducer(
+    CommentReducteur,
+    comments
+  );
 
   return (
-	
     <dataCommentsContext.Provider value={dataComments}>
       <div className="Container">
         <section className="Section-Comments">
@@ -27,10 +24,7 @@ export function AllComments({ data }) {
                     <Comments
                       commentData={comment}
                       setDataComments={setDataComments}
-                      dataComments={dataComments}
                       currentUser={currentUser}
-                      setEditComment={setEditComment}
-                      editComment={editComment}
                     />
                   }
                   <div className="reply">
@@ -40,10 +34,7 @@ export function AllComments({ data }) {
                           key={reply.id}
                           commentData={reply}
                           setDataComments={setDataComments}
-                          dataComments={dataComments}
                           currentUser={currentUser}
-                          setEditComment={setEditComment}
-                          editComment={editComment}
                         />
                       );
                     })}
@@ -62,7 +53,6 @@ export function AllComments({ data }) {
         <FormComment
           currentUser={currentUser}
           setDataComments={setDataComments}
-          dataComments={dataComments}
         />
       </div>
     </dataCommentsContext.Provider>
