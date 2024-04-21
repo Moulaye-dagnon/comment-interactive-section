@@ -29,8 +29,8 @@ export function CommentReducteur(DataComment, action ){
 				score: 0,
 				user: {
 					image: {
-						png: "../../public/images/avatars/image-juliusomo.png",
-						webp: "../../public/images/avatars/image-juliusomo.webp",
+						png: action.currentUser.image.png,
+						webp: action.currentUser.image.webp
 					},
 					username: action.currentUser.username,
 				},
