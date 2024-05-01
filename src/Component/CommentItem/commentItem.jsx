@@ -5,16 +5,19 @@ import icon_reply from "../../assets/icon-reply.svg";
 import icon_delete from "../../assets/icon-delete.svg";
 import icon_edit from "../../assets/icon-edit.svg";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FormComponent } from "../Form/Form";
 import { currentUserContext, setdataCommentsContext } from "../../utils/contex";
-export function Comments({ commentData }) {
+// import { Modal } from "../Modal/modal";
+export function Comments({ commentData, idDelete,Modal}) {
 
-	const setDataComments = useContext(setdataCommentsContext)
-	const currentUser = useContext(currentUserContext)
+	
+
+  const setDataComments = useContext(setdataCommentsContext);
+  const currentUser = useContext(currentUserContext);
+
   const [Reply, setReply] = useState(false);
   const [Edit, setEdit] = useState(false);
-
   //For incremnet the Score
   const incrementLike = (id) => {
     setDataComments({
@@ -50,10 +53,8 @@ export function Comments({ commentData }) {
 
   //for Delete a comment
   const handleDelete = (id) => {
-    setDataComments({
-      type: "Deleted",
-      id: id,
-    });
+	idDelete(id)
+	Modal(true)
   };
 
   //that allow to display the form for Edit ta comment of current user

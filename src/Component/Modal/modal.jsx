@@ -1,7 +1,10 @@
 import './modal.css'
 export function Modal({handleCancel, handleDelete}){
 	return (
-		<div className="a">
+
+		<>
+			
+			<div className='shadow'>
 			<div className='Modal'>
 			<h3 className="Modal-title">
 				Delete Comment 
@@ -14,6 +17,8 @@ export function Modal({handleCancel, handleDelete}){
 			<button onClick={handleDelete} className="btn-delete">yes, delete</button>
 			</div>
 		</div>
-		</div>
+			</div>
+		
+		</>
 	)
 }

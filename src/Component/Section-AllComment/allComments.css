@@ -1,3 +1,6 @@
+body.body{
+	overflow: hidden;
+}
 .container {
   padding: 16px;
 }
@@ -5,7 +8,7 @@
   max-width: 730px;
   margin: 0 auto;
 }
-.all .CommentItem {
+.all .CommentItemsWithReply {
   width: 100%;
 }
 
@@ -17,10 +20,27 @@
   align-items: end;
   margin: 0 auto;
 }
-.reply .CommentItem {
-  width: 92.82%;
-  margin: 20px 0;
+.reply .CommentItemsWithReply {
+	width: 95%;
 }
+	/* position: relative;	 */
+/* }
+.reply .CommentItemsWithReply::after{
+	content: "";
+	border-left: 2px solid #E9EBF0 ;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	margin-right: 10px;
+}
+.reply .CommentItemsWithReply .CommentItem{
+	width: 92%;
+	margin-inline: auto 0;
+} */
+
+
 @media only screen and (min-width: 600px) {
   .reply .CommentItem {
     width: 87, 94;
