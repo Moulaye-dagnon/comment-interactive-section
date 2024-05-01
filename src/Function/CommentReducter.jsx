@@ -1,12 +1,16 @@
+import { createDate } from "./Date";
+
 export function CommentReducteur(DataComment, action) {
   switch (action.type) {
     case "added": {
+		const now = Date.now() 
+		const createdAt = createDate(now)
       if (!action.CommentToReply) {
         const newId = Math.random().toString(36).substring(2, 9);
         let newRecors = {
           id: newId,
           content: action.value,
-          createdAt: "now",
+          createdAt: createdAt,
           score: 0,
           user: {
             image: {

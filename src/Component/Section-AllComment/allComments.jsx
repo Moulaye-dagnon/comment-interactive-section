@@ -15,6 +15,8 @@ export function AllComments({ data }) {
   const [displayModal, setdislplayModal] = useState(false)
   const [idDelete,setidDelete]= useState('')
 
+  
+
 	useEffect(()=>{
 		const AllData = JSON.parse((localStorage.getItem('Comments ')))
 		if(AllData){
