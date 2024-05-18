@@ -27,10 +27,11 @@ export function CommentReducteur(DataComment, action) {
       }
       if (action.CommentToReply) {
         const newId = Math.random().toString(36).substring(2, 9);
+		const createdAt = createDate(now)
         let newRecors = {
           id: newId,
           content: action.value,
-          createdAt: Date.now(),
+          createdAt: createdAt,
           score: 0,
           user: {
             image: {
